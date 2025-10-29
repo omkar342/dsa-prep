@@ -17,5 +17,5 @@ const maxSumSubArray = (nums) => {
 
 const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 const nums2 = [-1, -2, -3, -4, -5];
-const result = maxSumSubArray(nums2);
+const result = maxSumSubArray(nums);
 console.log("Result is ", result);
