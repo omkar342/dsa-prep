@@ -1,3 +1,14 @@
+// Problem: Subarray Sum Equals K
+// Description: Given an integer array and an integer k, find the total number of contiguous subarrays whose sum equals k.
+// Sample Input:
+//   nums = [1,1,1], k = 2
+// Sample Output:
+//   2
+//
+// Functions and Complexities:
+// - subArraySum: Time O(n), Space O(n)
+
+// Time: O(n), Space: O(n)
 const subArraySum = (numsArray, target) => {
   const preFixArray = [];
   let preFixSum = 0;

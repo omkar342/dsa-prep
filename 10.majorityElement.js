@@ -1,3 +1,14 @@
+// Problem: Majority Element
+// Description: Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊n/2⌋ times. Assume the array is non-empty and the majority element always exists.
+// Sample Input:
+//   [2,2,1,1,1,2,2]
+// Sample Output:
+//   2
+//
+// Functions and Complexities:
+// - majorityElement: Time O(n), Space O(1) using Boyer-Moore Voting Algorithm
+
+// Time: O(n), Space: O(1)
 const majorityElement = (inputArray) => {
   let count = 0,
     element = 0;

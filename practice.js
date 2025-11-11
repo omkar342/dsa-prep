@@ -1,3 +1,13 @@
+// File: Practice Snippets
+// Description: Miscellaneous practice implementations and experiments.
+// Sections:
+// - maxElement: Return maximum element in array
+//   Sample Input: [1, 6, 9, 22, 44, 15] -> Output: 44
+//   Time O(n), Space O(1)
+// - maxSumSubarray (Kadane's): Maximum subarray sum
+//   Sample Input: [1, -6, 9, 22, -44, 15] -> Output depends on content; here 31
+//   Time O(n), Space O(1)
+
 // const mergetTwoSortedArray = (arr1, arr2) => {
 //   const len1 = arr1.length;
 //   const len2 = arr2.length;
@@ -43,6 +53,7 @@
 
 // Kadane's algorithm / maxSumSubarray
 
+// Time: O(n), Space: O(1)
 const maxElement = (numsArray) => {
   let currElement = 0;
   let maxElement = 0;
@@ -62,6 +73,7 @@ const inputArray = [1, 6, 9, 22, 44, 15];
 
 // console.log("Result is", maxElementResult);
 
+// Time: O(n), Space: O(1)
 const maxSumSubarray = (inputArray) => {
   let maxSum = -100000;
 

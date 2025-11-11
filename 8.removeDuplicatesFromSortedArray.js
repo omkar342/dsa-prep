@@ -1,5 +1,16 @@
+// Problem: Remove Duplicates from Sorted Array
+// Description: Given a sorted array, remove the duplicates in-place such that each unique element appears only once and return the new length.
+// Sample Input:
+//   [1,1,2]
+// Sample Output:
+//   new length = 2, array becomes [1,2,_]
+//
+// Functions and Complexities:
+// - removeDuplicateArrayFunc: Time O(n), Space O(n)
+// - removeDuplicateArrayFuncTwoPointer: Time O(n), Space O(1)
 // Remove duplicates from sorted array
 
+// Time: O(n), Space: O(n)
 const removeDuplicateArrayFunc = (inputArray) => {
   let resultMap = {};
   let uniqueCount = 0;
@@ -14,6 +25,7 @@ const removeDuplicateArrayFunc = (inputArray) => {
   return uniqueCount;
 };
 
+// Time: O(n), Space: O(1)
 const removeDuplicateArrayFuncTwoPointer = (inputArray) => {
   let i = 0;
 

@@ -1,3 +1,15 @@
+// Problem: Two Sum (Indices of two numbers that add up to target)
+// Description: Given an array of integers and a target, return indices of the two numbers such that they add up to the target. Assume exactly one solution and you may not use the same element twice.
+// Sample Input:
+//   nums = [2, 7, 11, 15], target = 9
+// Sample Output:
+//   [0, 1]
+//
+// Functions and Complexities:
+// - twoSum: Time O(n log n) due to sorting, Space O(n) for value-index pairs
+// - twoSumWithoutSorting: Time O(n), Space O(n) using a hashmap
+
+// Time: O(n log n), Space: O(n)
 function twoSum(inputArray, targetNumber) {
   let left = 0;
   let right = inputArray.length - 1;
@@ -37,6 +49,7 @@ targetNumber = 9;
 const result = twoSum(array, targetNumber);
 console.log("Result is", result);
 
+// Time: O(n), Space: O(n)
 function twoSumWithoutSorting(inputArray, targetNumber) {
   const resultMap = {};
 

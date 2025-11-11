@@ -1,3 +1,16 @@
+// Problem: Maximum Sum of Subarrays of Size K (and Distinct Variant)
+// Description: Compute the maximum sum of a subarray of fixed length k. Variant: the subarray's elements must be all distinct.
+// Sample Input:
+//   nums = [1,5,4,2,9,9,9], k = 3
+// Sample Output:
+//   max sum size k = 20  // [9,9,2] (plain)
+//   max sum size k with all distinct = 15 // [5,4,6] or similar depending on input
+//
+// Functions and Complexities:
+// - maxSumOfSubarrays: Time O(n), Space O(1)
+// - maxSumOfDistinctSubarrays: Time O(n), Space O(k)
+
+// Time: O(n), Space: O(1)
 const maxSumOfSubarrays = (inputArray, target) => {
   let i = 0,
     j = 0;
@@ -19,6 +32,7 @@ const maxSumOfSubarrays = (inputArray, target) => {
   return maxSum;
 };
 
+// Time: O(n), Space: O(k)
 const maxSumOfDistinctSubarrays = (inputArray, target) => {
   let sum = 0;
   let maxSum = 0;
