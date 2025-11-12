@@ -1,4 +1,5 @@
 // File: Practice Snippets
+// Topic: Array, Dynamic Programming, Two Pointers, Greedy
 // Description: Miscellaneous practice implementations and experiments.
 // Sections:
 // - maxElement: Return maximum element in array
@@ -6,6 +7,12 @@
 //   Time O(n), Space O(1)
 // - maxSumSubarray (Kadane's): Maximum subarray sum
 //   Sample Input: [1, -6, 9, 22, -44, 15] -> Output depends on content; here 31
+//   Time O(n), Space O(1)
+// - removeDuplicateArrayFuncTwoPointer: Remove duplicates using two pointers
+//   Sample Input: [1, 2, 2] -> Output: [1, 2]
+//   Time O(n), Space O(1)
+// - getMaxProfit: Best time to buy and sell stock
+//   Sample Input: [7, 1, 5, 3, 6, 4] -> Output: 5
 //   Time O(n), Space O(1)
 
 // const mergetTwoSortedArray = (arr1, arr2) => {
@@ -53,6 +60,7 @@
 
 // Kadane's algorithm / maxSumSubarray
 
+// Technique: Linear Scan
 // Time: O(n), Space: O(1)
 const maxElement = (numsArray) => {
   let currElement = 0;
@@ -73,6 +81,7 @@ const inputArray = [1, 6, 9, 22, 44, 15];
 
 // console.log("Result is", maxElementResult);
 
+// Technique: Kadane's Algorithm
 // Time: O(n), Space: O(1)
 const maxSumSubarray = (inputArray) => {
   let maxSum = -100000;
@@ -92,8 +101,50 @@ const maxSumSubarray = (inputArray) => {
   return maxSum;
 };
 
+// Technique: Two Pointers
+// Time: O(n), Space: O(1)
+const removeDuplicateArrayFuncTwoPointer = (inputArray) => {
+  let i = 0;
+
+  for (let j = 0; j < inputArray.length; j++) {
+    if (inputArray[i] !== inputArray[j]) {
+      i++;
+      inputArray[i] = inputArray[j];
+    }
+  }
+  return inputArray;
+};
+
+// Technique: Greedy / One Pass
+// Time: O(n), Space: O(1)
+const getMaxProfit = (inputArray) => {
+  let maxProfit = 0,
+    bestBuy = inputArray[0];
+
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i] > bestBuy) {
+      maxProfit = Math.max(maxProfit, inputArray[i] - bestBuy);
+    }
+
+    bestBuy = Math.min(bestBuy, inputArray[i]);
+  }
+
+  return maxProfit;
+};
+
 const maxInputArray = [1, -6, 9, 22, -44, 15];
 
 const maxSumSubarrayResult = maxSumSubarray(maxInputArray);
 
 console.log("Result is", maxSumSubarrayResult);
+
+const removeDuplicateArrayFuncTwoPointerResult =
+  removeDuplicateArrayFuncTwoPointer([1, 2, 2]);
+
+console.log("Result is", removeDuplicateArrayFuncTwoPointerResult);
+
+const getMaxProfitInput = [7, 1, 5, 3, 6, 4];
+
+const getMaxProfitResult = getMaxProfit(getMaxProfitInput);
+
+console.log("Result is", getMaxProfitResult);

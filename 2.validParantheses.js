@@ -1,4 +1,5 @@
 // Problem: Valid Parentheses
+// Topic: Stack, String
 // Description: Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. An input string is valid if open brackets are closed by the same type of brackets in the correct order.
 // Sample Input:
 //   s = "{[]}"
@@ -8,6 +9,7 @@
 // Functions and Complexities:
 // - validParantheses: Time O(n), Space O(n) for the stack
 
+// Technique: Stack
 // Time: O(n), Space: O(n)
 function validParantheses(parenthesesInputString) {
   if (parenthesesInputString.length % 2 !== 0) return false;

@@ -1,4 +1,5 @@
 // Problem: Merge Two Sorted Arrays (In-place from the end)
+// Topic: Array, Two Pointers
 // Description: Given two sorted arrays, merge the second into the first as one sorted array. Typical variant assumes the first array has enough extra space at the end to hold the second array.
 // Sample Input:
 //   a = [1,4,6,_,_,_], b = [2,3,5]
@@ -8,6 +9,7 @@
 // Functions and Complexities:
 // - mergeArrays: Time O(m + n), Space O(1)
 
+// Technique: Two Pointers (from end)
 // Time: O(m + n), Space: O(1)
 function mergeArrays(a, b) {
   // let i = 0, j = 0;

@@ -1,4 +1,5 @@
 // Problem: Missing Number
+// Topic: Array, Math, Bit Manipulation
 // Description: Given an array containing n distinct numbers taken from the range [0, n], return the one number that is missing from the array.
 // Sample Input:
 //   [0,1,3]
@@ -8,6 +9,7 @@
 // Functions and Complexities:
 // - findTheMissingNumberInArray: Time O(n), Space O(1)
 
+// Technique: Sum Formula
 // Time: O(n), Space: O(1)
 const findTheMissingNumberInArray = (inputArray) => {
   let expectedSum = 0;

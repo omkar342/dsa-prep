@@ -1,4 +1,5 @@
 // Problem: Maximum Sum of Subarrays of Size K (and Distinct Variant)
+// Topic: Array, Sliding Window, Hash Map
 // Description: Compute the maximum sum of a subarray of fixed length k. Variant: the subarray's elements must be all distinct.
 // Sample Input:
 //   nums = [1,5,4,2,9,9,9], k = 3
@@ -10,6 +11,7 @@
 // - maxSumOfSubarrays: Time O(n), Space O(1)
 // - maxSumOfDistinctSubarrays: Time O(n), Space O(k)
 
+// Technique: Sliding Window
 // Time: O(n), Space: O(1)
 const maxSumOfSubarrays = (inputArray, target) => {
   let i = 0,
@@ -32,6 +34,7 @@ const maxSumOfSubarrays = (inputArray, target) => {
   return maxSum;
 };
 
+// Technique: Sliding Window + Hash Map
 // Time: O(n), Space: O(k)
 const maxSumOfDistinctSubarrays = (inputArray, target) => {
   let sum = 0;
@@ -60,7 +63,7 @@ const maxSumOfDistinctSubarrays = (inputArray, target) => {
   return maxSum;
 };
 
-const inputArray = [9, 9, 9];
+const inputArray = [1, 5, 4, 2, 9, 9, 9];
 
 const target = 3;
 
